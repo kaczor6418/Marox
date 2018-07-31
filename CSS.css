@@ -14,8 +14,7 @@ body{
 
 .page-header{
 	position: absolute;
-	padding: 15px;
-	padding-top: 15px;
+	padding: 1.2em;
 	width: 100%;
 	min-width: 280px;
 	box-sizing: border-box;
@@ -26,8 +25,8 @@ body{
 	border: 0;
 	background: 0;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 1em;
+	top: 1em;
 	fill: #EDEDED;
 }
 
@@ -43,10 +42,10 @@ body{
 }
 
 .page-header .navi .menu li{
-	border-bottom: 0.1px solid #041E2B;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 1.4rem;
+	border-bottom: 0.01em solid #041E2B;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 1em;
 }
 
 .page-header .navi .menu li a{
@@ -62,33 +61,24 @@ body{
 }
 
 .section-title{
-	height: 50px;
-	padding: 10px;
-	padding-top: 40px;
+	height: 2em;
+	padding: 0.3em;
+	padding-top: 1.8em;
 	margin: auto;
 }
 
-.informations{
-	margin: auto;
-	padding: 20px;
-	padding-top: 0;
-	padding-bottom: 0;
-	box-sizing: border-box;
-}
-
+.informations,
 .section-informations{
 	margin: auto;
-	padding: 20px;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 1em;
 	box-sizing: border-box;
 }
 
 .photos{
-	padding-bottom: 5px;
-	padding-top: 5px;
-	margin-bottom: 5px;
-	margin-top: 5px;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 	max-width: 100%;
 	margin: auto;
 }
@@ -104,7 +94,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0em 0.1em 1.5em 0em rgba(0,0,0,0.75);
 }
 
 .page-header .navi .hamburger .cross-icon{
@@ -112,8 +102,8 @@ body{
 }
 
 .page-header .navi .hamburger .hamburger-icon{
-	width: 30px;
-	height: 30px;
+	width: 2em;
+	height: 2em;
 }
 
 .photos .picture img{
@@ -126,28 +116,20 @@ body{
 	padding-top: 0;
 }
 
-.section-picture img{
-	padding: 10%;
-	max-width: 100%;
-	min-width: 160px;
-	padding-bottom: 40px;
-	padding-top: 0;
-}
-
 .title{
 	color: #EDEDED;
 	margin: 0;
 	font-weight: 100;
-	font-size: 1px;
+	font-size: 1em;
 	font-family: "Ubuntu";
 }
 
 .footer{
 	text-align: center;
 	background: #22264B;
-	padding: 30px;
+	padding: 1.5em;
 	min-width: 220px;
-	box-shadow: 0px -2px 16px 0px rgba(0,0,0,0.75);
+	box-shadow: 0em -0.5em 3em 0em rgba(0,0,0,0.75);
 }
 .footer .footer-navi{
 	list-style: none;
@@ -156,7 +138,8 @@ body{
 }
 
 .footer .footer-navi li{
-	margin-bottom: 20px;
+	margin-bottom: 0.7em;
+	box-sizing: border-box;
 	transition: all .2s ease-in-out;
 }
 
@@ -171,14 +154,14 @@ body{
 }
 
 .footer .logo{
-	width: 60px;
-	height: 60px;
+	width: 4em;
+	height: 4em;
 	fill: #E8EDF3;
 }
 
 .page-header.navi-opened{
 	background-color: #EDEDED;
-	box-shadow: -1px 9px 19px -8px rgba(0, 0, 0, 0.49);
+	box-shadow: -0.1em 0.9em 1.2em -0.8em rgba(0, 0, 0, 0.49);
 }
 
 .page-header.navi-opened .logo{
@@ -198,9 +181,9 @@ body{
 	pointer-events: auto;
 }
 .article .box-section-informations{
-	font-size: 1rem;
+	font-size: 1em;
 	margin: auto;
-	padding: 20px;
+	padding: 1em;
 	padding-top: 0;
 	padding-bottom: 0;
 	box-sizing: border-box;
@@ -208,12 +191,12 @@ body{
 
 .article .box-section-informations h3{
 	margin: 0;
-	margin-top: 10px;
+	margin-top: 1em;
 }
 
 .article .box-section-informations .box-size .box-tab{
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
 }
 
 .article .box-section-informations .box-size .box-tab th{
@@ -245,48 +228,48 @@ body{
 }
 
 .article .box-section-informations .box-description{
-	border-bottom: 0.1px solid #22264B;
+	border-bottom: 0.01em solid #22264B;
 }
 
 .article .album-description {
 	margin: auto;
-	padding: 20px;
+	padding: 1em;
 	padding-top: 0;
 	padding-bottom: 0;
 	box-sizing: border-box;
-	font-size: 1rem;
+	font-size: 1em;
 	margin-bottom: 0;
 	}
 
 .article .album-description .efects{
-	padding-left: 10px;
+	padding-left: 0.5em;
 	margin: 0;
 }
 
 .article .prices{
 	margin: auto;
-	padding: 20px;
+	padding: 1em;
 	padding-top: 0;
 	padding-bottom: 0;
 	box-sizing: border-box;
-	font-size: 1rem;
-	margin-bottom: 20px;
+	font-size: 1em;
+	margin-bottom: 1em;
 }
 
 .article .price-list{
 	margin-left:auto;
     margin-right:auto;
-	border: 1.5px solid #22264B;
+	border: 0.1em solid #22264B;
 }
 
 .article .price-list th{
 	width: 10%;
 	height: 20%;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding-right: 0.8em;
+	padding-left: 0.8em;
 	text-align: center;
 	box-sizing: border-box;
-	border: 2.5px solid #22264B;
+	border: 0.09em solid #22264B;
 	transition: background-color 0.5s ease;
 }
 
@@ -294,7 +277,7 @@ body{
 	width: 10%;
 	height: 30%;
 	text-align: center;
-	border: 1.5px solid #22264B;
+	border: 0.07em solid #22264B;
 }
 
 .article .price-list tr{
@@ -312,7 +295,7 @@ body{
     margin-right:auto;
 	max-width: 80%;
 	min-width: 160px;
-	padding-bottom: 30px;
+	padding-bottom: 1.8em;
 	padding-top: 0;
 }
 
@@ -324,26 +307,19 @@ body{
 	display: none;
 }
 
-.article .contact{
-	font-size: 1.2rem;
-	max-width: 80%;
-}
-
-.article .contact p{
-	padding-left: 28px;
-}
-
+.article .contact,
 .article .busines{
-	font-size: 1.2rem;
+	font-size: 1em;
 	max-width: 80%;
 }
 
+.article .contact p,
 .article .busines p{
-	padding-left: 28px;
+	padding-left: 1.8em;
 }
 
 .article .map{
-	padding-bottom: 20px;
+	padding-bottom: 1.5em;
 	clear: both;
 	width: 100%;
 }
@@ -359,14 +335,14 @@ body{
 	width: 100%;
 }
 .article .movie-title{
-	padding-left: 20px;
-	font-size: 1.2rem;
+	text-align: center;
+	font-size: 1em;
 }
 
 .backToTop {
     padding: 2%;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.5em;
     background: #B56969;
 
     opacity: 1;
@@ -379,7 +355,7 @@ body{
 
     cursor: pointer;
 
-    font-size: 1.2rem;
+    font-size: 0.8em;
     color: #22264B;
 }
 
@@ -520,7 +496,7 @@ body{
 		width: 30vh;
 		top: 0;
 		right: 0;
-		box-shadow: 0px 0px 45px 0px rgba(242,74,74,1);
+		box-shadow: 0em 0em 5em 0em rgba(242,74,74,1);
 	}
 	.page-header .navi .hamburger{
 		display: none;
@@ -536,18 +512,18 @@ body{
 
 	.page-header .navi .menu li{
 		box-sizing: border-box;
-		border-bottom: 1px solid #F1D3BB;
+		border-bottom: 0.1em solid #F1D3BB;
         height: 18.25vh;
 		padding: 18%;
 		opacity: 1;
 		pointer-events: auto;
-		box-shadow: 0px -3px 6px -3px rgba(0,0,0,1);
+		box-shadow: 0em -0.2em 0.5em -0.2em rgba(0,0,0,1);
 		transition: background-color 0.5s ease;
 		transition: box-shadow 0.3s ease-in-out;
 	}
 
 	.page-header .navi .menu li:hover{
-		 box-shadow: 0px 0px 40px 8px rgba(175,29,29,1);
+		 box-shadow: 0em 0em 3em 0.6em rgba(175,29,29,1);
 		 background-color: #af1d1d;
 	}
 
@@ -566,46 +542,47 @@ body{
 
 	.article .welcome{
 		padding-top: 2em;
-		box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.75);
+		box-shadow: 0em 0.2em 2em 0em rgba(0,0,0,0.75);
 	}
 
 	.article .section-title{
-		font-size: 7vh;
-		padding-bottom: 2.8vh;
+		font-size: 3em;
+		padding-bottom: 0.5em;
+		padding-top: 1em;
 		margin: auto;
-		left: 0;
-		right: 0;
+	}
+
+	.article .contact,
+	.article .busines{
+		max-width: 50%;
+		padding: 0em;
 	}
 
 	.article .informations{
-		font-size: 3.9vh;
+		font-size: 2.6em;
 		margin: auto;
 		left: 0;
 		right: 0;
 	}
 
 	.article .box-section-informations{
-	font-size: 3.9vh;
+	font-size: 2.6em;
 	margin: auto;
-	padding: 20px;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 1em;
 	box-sizing: border-box;
 	}
 
 	.article .box-section-informations h3{
-		margin: 0;
-		margin-top: 10px;
+		padding-bottom: 0.5em;
 	}
 
 	.article .box-section-informations .box-size{
 		max-width: 35%;
 		float:left;
-		padding-top: 30px;
 	}
 
 	.article .box-section-informations .box-size .box-tab{
-		padding-top: 30px;
+		padding-top: 1em;
 	}
 
 	.article .box-section-informations .box-picture{
@@ -634,14 +611,10 @@ body{
 		padding-top: 15%;
 	}
 
-	.article .box-section-informations .box-description{
-		clear: both;
-		font-size: 3.9vh;
-	}
-
+	.article .box-section-informations .box-description,
 	.article .box-section-informations .box-description-last{
 		clear: both;
-		font-size: 3.9vh;
+		font-size: 1em;
 	}
 
 	.article .prices{
@@ -677,31 +650,22 @@ body{
 	}
 
 	.article .contact{
-		margin: auto;
-		font-size: 3.9vh;
+		padding-left: 1em;
+		font-size: 2em;
 		float: left;
-		max-width: 50%;
-	}
-
-	.article .contact p{
-		padding-left: 50px;
-		margin-top:  3vh;
-		margin-bottom:  3vh;
 	}
 
 	.article .busines{
-		padding-left: 7%;
-		margin: auto;
-		right: 0;
-		font-size: 3.9vh;
-		float: left;
-		max-width: 50%;
+		float: right;
+		padding-right: 1em;
+		font-size: 2em;
 	}
 
+	.article .contact p,
 	.article .busines p{
-		margin-top: 3vh;
-		margin-bottom: 3vh;
-		padding-left: 50px;
+		padding-left: 1.5em;
+		margin-top:  1em;
+		margin-bottom:  1em;
 	}
 
 	.article .map{
@@ -726,16 +690,16 @@ body{
 	}
 
 	.backToTop {
-		font-size: 2.2rem;
+		font-size: 2em;
 	}
 
 }
 
 @media (min-width: 48em)and (max-width: 55em) {
 	.article .box-section-informations{
-	font-size: 1.6rem;
+	font-size: 1em;
 	margin: auto;
-	padding: 20px;
+	padding: 1em;
 	padding-top: 0;
 	padding-bottom: 0;
 	box-sizing: border-box;
@@ -743,17 +707,17 @@ body{
 
 	.article .box-section-informations h3{
 		margin: 0;
-		margin-top: 10px;
+		margin-top: 0.8em;
 	}
 
 	.article .box-section-informations .box-size{
 		max-width: 35%;
 		float:left;
-		padding-top: 30px;
+		padding-top: 2em;
 	}
 
 	.article .box-section-informations .box-size .box-tab{
-		padding-top: 30px;
+		padding-top: 2em;
 	}
 
 	.article .box-section-informations .box-picture{
@@ -784,38 +748,31 @@ body{
 
 	.article .box-section-informations .box-description{
 		clear: both;
-		font-size: 1.6rem;
+		font-size: 1em;
 	}
 
 	.article .box-section-informations .box-description-last{
 		clear: both;
-		font-size: 1.6rem;
+		font-size: 1em;
 	}
 
 	.article .contact{
-		margin: auto;
-		font-size: 1.4rem;
-		float: left;
 		max-width: 50%;
+		float: left;
+		font-size: 1.4em;
 	}
-
-	.article .contact p{
-		padding-left: 50px;
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
-
 	.article .busines{
-		margin: auto;
-		font-size: 1.4rem;
-		float: left;
 		max-width: 50%;
+		float: right;
+		padding-right: 1em;
+		font-size: 1.4em;
 	}
 
+	.article .contact p,
 	.article .busines p{
-		margin-top: 15px;
-		margin-bottom: 15px;
-		padding-left: 50px;
+		padding-left: 2em;
+		margin-top: 0.2em;
+		margin-bottom: 0.2em;
 	}
 
 	.article .movie .yt{
