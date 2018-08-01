@@ -367,7 +367,7 @@ body{
 .containerForm {
 	text-align: center;
     width: 80%;
-    margin: 1% auto;
+    margin: 3em auto;
     overflow: hidden;
 }
 
@@ -382,15 +382,17 @@ body{
 }
 
 .containerForm ul.errors {
-    width: 80%;
-    padding: 20px;
-    margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 2.5em;
     background-color: #FFD4DE;
 }
 
 .containerForm ul.errors li {
+	max-width: 100%;
+	margin-right: 3.5em;
+	font-size: 1.2em;
     list-style: none;
-    line-height: 30px;
+    line-height: 2em;
     color: #F70053;
 }
 
@@ -425,7 +427,7 @@ body{
 .containerForm form input[type="email"] {
     display: block;
     width: 100%;
-    height: 2em;
+    height: 3em;
     padding: 0 1.5em;
     margin: 0 1.5em 1.5em 0;
     float: left;
@@ -433,7 +435,7 @@ body{
 
 .containerForm form select {
     width: 100%;
-    height: 2em;
+    height: 3em;
     padding: 0 1.5em;
     margin: 0 1.5em 1.5em 0;
     border-radius: 0;
@@ -446,7 +448,7 @@ body{
     clear: both;
     display: block;
     width: 100%;
-    height: 12em;
+    height: 18em;
     padding: 1% 2% 0 2%;
     margin-bottom: 3%;
 
@@ -477,7 +479,7 @@ body{
 
 
 
-@media (min-width: 52em) {
+@media (min-width: 62em) {
 
 	.page-header.navi-opened {
 		background: 0;
@@ -559,14 +561,14 @@ body{
 	}
 
 	.article .informations{
-		font-size: 2.6em;
+		font-size: 3vh;
 		margin: auto;
 		left: 0;
 		right: 0;
 	}
 
 	.article .box-section-informations{
-	font-size: 2.6em;
+	font-size: 4vh;
 	margin: auto;
 	padding: 1em;
 	box-sizing: border-box;
@@ -695,7 +697,7 @@ body{
 
 }
 
-@media (min-width: 48em)and (max-width: 55em) {
+@media (min-width: 48em)and (max-width: 62em) {
 	.article .box-section-informations{
 	font-size: 1em;
 	margin: auto;
