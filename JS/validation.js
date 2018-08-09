@@ -2,6 +2,11 @@
 
     var form = document.querySelector(".myForm"),
         fields = form.querySelectorAll("[data-error]");
+
+    function isFullname(field) {
+      let re = /[a-ząćęłńóśżź]{1,35} [a-ząćęłńóśżź]{1,35}$/i;
+      return re.test(String(field.value).toLowerCase());
+    }
     
     function isEmpty(field) {
       return field.value !== "";
@@ -13,7 +18,7 @@
     
     function isEmail(field) {
       let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(field).toLowerCase());
+      return re.test(String(field.value).toLowerCase());
     }
     
     function displayErrors(errors) {
@@ -47,7 +52,7 @@
     
         switch (field.type) {
           case "text":
-            isValid = isEmpty(field);
+            isValid = isFullname(field);
             break;
           case "email":
             isValid =  isEmail(field);
