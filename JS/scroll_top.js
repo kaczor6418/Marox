@@ -1,10 +1,10 @@
 (function() {
 
 function createButton() {
-  var button = document.createElement("button");
+  var button = document.createElement('button');
 
-  button.classList.add("backToTop", "hidden");
-  button.innerHTML = "&#9650;";
+  button.classList.add('backToTop', 'hidden');
+  button.innerHTML = '&#9650;';
   document.body.appendChild(button);
 
   return button;
@@ -12,23 +12,23 @@ function createButton() {
 
 function animateScroll() {
   if (window.pageYOffset > 0){
-    window.scrollBy(0, -5);
-    setTimeout(animateScroll, 3);
+    window.scrollBy(0, -15);
+    setTimeout(animateScroll, 1);
   }
 }
 
  var button = createButton();
- let clientHeight = document.querySelector(".navi").clientHeight;
+ let clientHeight = document.querySelector('.navi').clientHeight;
 
- window.addEventListener("scroll", function() {
+ window.addEventListener('scroll', function() {
    if ( window.pageYOffset >= clientHeight) {
-     button.classList.remove("hidden");
+     button.classList.remove('hidden');
    } else {
-     button.classList.add("hidden");
+     button.classList.add('hidden');
    }
  }, false);
 
- button.addEventListener("click", function (e) {
+ button.addEventListener('click', function (e) {
   e.stopPropagation();
   animateScroll();
  }, false);

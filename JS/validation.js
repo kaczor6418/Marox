@@ -1,76 +1,76 @@
 (function() {
 
-    var form = document.querySelector(".myForm"),
-        fields = form.querySelectorAll("[data-error]");
+    var form = document.querySelector('.myForm'),
+        fields = form.querySelectorAll('[data-error]');
 
     function isFullname(field) {
       let re = /[a-ząćęłńóśżź]{1,35} [a-ząćęłńóśżź]{1,35}$/i;
       return re.test(String(field.value).toLowerCase());
     }
-    
+
     function isEmpty(field) {
-      return field.value !== "";
+      return field.value !== '';
     }
-    
+
     function isAtLeast(field, min) {
       return field.value.length > min;
     }
-    
+
     function isEmail(field) {
-      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      let re = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(field.value).toLowerCase());
     }
-    
+
     function displayErrors(errors) {
-      var ul = document.querySelector("ul.errors");
-    
+      var ul = document.querySelector('ul.errors');
+
       if(!ul) {
-        ul = document.createElement("ul");
-        ul.classList.add("errors");
+        ul = document.createElement('ul');
+        ul.classList.add('errors');
       }
-    
-      ul.innerHTML = "";
-    
+
+      ul.innerHTML = '';
+
       errors.forEach(function (error) {
-        let li = document.createElement("li");
+        let li = document.createElement('li');
         li.textContent = error;
         ul.appendChild(li);
       });
-    
+
       form.parentNode.insertBefore(ul, form);
-    
+
     }
-    
-    form.addEventListener("submit", function (e) {
+
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-    
+
       let errors = [];
-    
+
       for (let i = 0; i < fields.length; i++) {
         let field = fields[i],
             isValid = null;
-    
+
         switch (field.type) {
-          case "text":
+          case 'text':
             isValid = isFullname(field);
             break;
-          case "email":
+          case 'email':
             isValid =  isEmail(field);
             break;
-          case "select-one":
+          case 'select-one':
             isValid = isEmpty(field);
             break;
-          case "textarea":
+          case 'textarea':
             isValid = isAtLeast(field, 3);
             break;
           default:
         }
-    
+
         if (!isValid) {
-          field.classList.add("error");
+          field.classList.add('error');
           errors.push(field.dataset.error);
         }else {
-          field.classList.remove("error");
+          field.classList.remove('error');
         }
       }
       if(errors.length) {
@@ -78,8 +78,8 @@
       }else {
         form.submit();
       }
-    
+
     console.log(errors);
-    
+
     }, false)
     })();
