@@ -1,3 +1,18 @@
+function displayErrors(errors, form) {
+  let ul = document.querySelector('ul.errors');
+  if(!ul) {
+    ul = document.createElement('ul');
+    ul.classList.add('errors');
+  }
+  ul.innerHTML = '';
+  errors.forEach(function (error) {
+    let li = document.createElement('li');
+    li.textContent = error;
+    ul.appendChild(li);
+  });
+  form.parentNode.insertBefore(ul, form);
+}
+
 (function() {
 
     var form = document.querySelector('.myForm'),
@@ -19,26 +34,6 @@
     function isEmail(field) {
       let re = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(String(field.value).toLowerCase());
-    }
-
-    function displayErrors(errors) {
-      var ul = document.querySelector('ul.errors');
-
-      if(!ul) {
-        ul = document.createElement('ul');
-        ul.classList.add('errors');
-      }
-
-      ul.innerHTML = '';
-
-      errors.forEach(function (error) {
-        let li = document.createElement('li');
-        li.textContent = error;
-        ul.appendChild(li);
-      });
-
-      form.parentNode.insertBefore(ul, form);
-
     }
 
     form.addEventListener('submit', function (e) {
@@ -74,12 +69,9 @@
         }
       }
       if(errors.length) {
-        displayErrors(errors);
+        displayErrors(errors, form);
       }else {
-        form.submit();
+        checkMessage(errors);
       }
-
-    console.log(errors);
-
     }, false)
     })();

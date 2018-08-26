@@ -384,7 +384,7 @@ body{
 .containerForm ul.errors {
     width: 100%;
     margin-bottom: 2.5em;
-    background-color: #FFD4DE;
+    background-color: #E80C0C0F;
 }
 
 .containerForm ul.errors li {
@@ -393,7 +393,7 @@ body{
 	font-size: 1.2em;
     list-style: none;
     line-height: 2em;
-    color: #F70053;
+    color: #666666;
 }
 
 .containerForm form {
@@ -421,6 +421,7 @@ body{
 .containerForm select.error,
 .containerForm textarea.error {
     border-color: #FFA9C7;
+		background: #E80C0C0F;
 }
 
 .containerForm form input[type="text"],
