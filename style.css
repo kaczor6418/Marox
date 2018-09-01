@@ -424,6 +424,14 @@ body{
 		background: #E80C0C0F;
 }
 
+.serverError {
+	border: 0.05em #C5C5C5 solid;
+	border-color: #FFA9C7;
+	background: #E80C0C0F;
+	font: 1em Tahoma, Arial, sans-serif;
+	color: #8A8A8A;
+}
+
 .containerForm form input[type="text"],
 .containerForm form input[type="email"] {
     display: block;

@@ -14,7 +14,7 @@ function youAreVulgar(message, errors) {
   displayErrors(errors, form);
 }
 
-function checkMessage(errors) {
+function antiVulgar(errors, field) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET','http://localhost/Marox/restrictedWords/pl-pl.html');
   xhr.onload = function() {
@@ -27,7 +27,7 @@ function checkMessage(errors) {
         youAreVulgar(message, errors);
       }
       else {
-        form.submit();
+        sendEmail();
       }
   }
   xhr.send();

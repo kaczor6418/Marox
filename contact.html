@@ -161,16 +161,16 @@
 		</div>
 		<div class="containerForm">
 			<h1>Napisz do nas!</h1>
-			<form action="#" class="myForm">
-				<input type="text" name="your-name" placeholder="Imię i nazwisko" data-error="Nieprawidłowe imię i nazwisko">
-				<input type="email" name="your-email" placeholder="Adres e-mail" data-error="Nie prawidłowy adres e-mail">
-				<select name="your-subject" data-error="Wybierz temat wiadomości">
+			<form action="mail.php" method="post" class="myForm">
+				<input type="text" name="name" placeholder="Imię i nazwisko" data-error="Nieprawidłowe imię i nazwisko">
+				<input type="email" name="email" placeholder="Adres e-mail" data-error="Nie prawidłowy adres e-mail">
+				<select name="subject" data-error="Wybierz temat wiadomości">
 					<option value="" disabled selected>- Temat wiadomości -</option>
 					<option value="pytanie">Pytanie</option>
 					<option value="propozycja">Propozycja</option>
 					<option value="support">Zamówienie</option>
 				</select>
-				<textarea name="your-message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
+				<textarea name="message" placeholder="Treść wiadomości" data-error="Wpisz treść wiadomości"></textarea>
 				<button type="submit">Wyślij</button>
 			</form>
 		</div>
@@ -280,6 +280,8 @@
 		<script src="js/validation.js" defer></script>
 		<script src="js/scroll_top.js" defer></script>
 		<script src="js/antiVulgar.js" defer></script>
+		<script src="js/sendEmail.js" defer></script>
+		<script src="js/ajaxLibrary.js" defer></script>
 	</body>
 
 </html>

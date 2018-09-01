@@ -71,7 +71,7 @@ function displayErrors(errors, form) {
       if(errors.length) {
         displayErrors(errors, form);
       }else {
-        checkMessage(errors);
+        antiVulgar(errors);
       }
     }, false)
     })();
