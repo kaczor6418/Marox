@@ -16,7 +16,7 @@ function youAreVulgar(message, errors) {
 
 function antiVulgar(errors, field) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET','http://localhost/Marox/restrictedWords/pl-pl.html');
+  xhr.open('GET','/restrictedWords/pl-pl.html');
   xhr.onload = function() {
       let restrictedWords = (xhr.responseText).split(/, */),
           regex = createRegex(restrictedWords),

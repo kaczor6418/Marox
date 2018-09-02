@@ -7,11 +7,12 @@ if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQU
 
 }
 
-if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
 
-      $to = 'pphmarox@gmail.com';
-      $subject = 'Wiadomość z formularza';
+      $to = 'marox@marox.pl';
+      $subject = $_POST['subject'];
       $message = $_POST['message'];
+      $name = $_POST['name'];
       $headers = 'From: ' . $_POST['email'] . "\r\n" .
           'Reply-To: ' . $_POST['email'] . "\r\n" .
           'Content-Type: text/plain;charset=utf-8\r\n' .

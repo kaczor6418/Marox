@@ -1,16 +1,23 @@
-function displayErrors(errors, form) {
-  let ul = document.querySelector('ul.errors');
+function displayErrors(errors) {
+  let ul = document.querySelector('ul.errors'),
+      parent = document.querySelector('.containerForm .status');
   if(!ul) {
     ul = document.createElement('ul');
     ul.classList.add('errors');
   }
-  ul.innerHTML = '';
-  errors.forEach(function (error) {
-    let li = document.createElement('li');
-    li.textContent = error;
-    ul.appendChild(li);
-  });
-  form.parentNode.insertBefore(ul, form);
+  if(ul.hasChildNodes()){
+    while (ul.firstChild) {
+      ul.removeChild(ul.firstChild);
+    }
+  }
+  if(errors){
+    errors.forEach(function (error) {
+      let li = document.createElement('li');
+      li.textContent = error;
+      ul.appendChild(li);
+    });
+    parent.appendChild(ul);
+  }
 }
 
 (function() {
@@ -69,7 +76,7 @@ function displayErrors(errors, form) {
         }
       }
       if(errors.length) {
-        displayErrors(errors, form);
+        displayErrors(errors);
       }else {
         antiVulgar(errors);
       }

@@ -4,6 +4,12 @@ function AJAX(config) {
         return new AJAX(config);
     }
     this._xhr = new XMLHttpRequest();
+    this._xhr.onprgoress = function(e) {
+      if (e.lengthComputable) {
+        var percent = (e.loaded / e.total) * 100
+      }
+      uploadProgress.value = percent;
+    }
     this._config = this._extendOptions(config);
     this._assignEvents();
     this._beforeSend();
@@ -90,7 +96,7 @@ AJAX.prototype._send = function(data) {
 
 };
 
-AJAX.prototype._handleResponse = function(e) {
+AJAX.prototype._handleResponse = function() {
 
     if(this._xhr.readyState === 4 && this._xhr.status >= 200 && this._xhr.status < 400) {
         if(typeof this._config.success === 'function') {
